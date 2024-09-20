@@ -43,6 +43,39 @@ rm test.txt #在文件管理器中删除文件
 git rm test.txt #从版本库中删除文件  
 git checkout -- test.txt #从版本库恢复
 
+git remote add origin git@github.com:niceoneeight/learngit.git #关联远程库
+git push -u origin master #将本地库内容推送到远程库
+git remote -v #查看远程库信息
 
+git clone git@github.com:niceoneeight/gitskills.git #克隆远程仓库
+ 
+git checkout -b dev #创建并切换到分支dev
+#等价于
+git branch dev
+git checkout dev
 
+git branch #查看当前分支
+
+git checkout master #切换回master分支
+
+git merge dev #合并分支
+
+git branch -d dev #删除分支
+
+git switch -c dev #创建并切换到新的分支dev
+
+git switch master #直接切换到master分支
+
+git log --graph --pretty=oneline --abbrev-commit #查看分支的合并情况
+
+git merge --no-ff -m "merge with no-ff" dev #--no-ff 参数合并dev分支（禁用fast forward），可以看出历史合并，fast forward 合并看不出; 加上 -m 创建commit描述
+
+git stash #将当前工作区存储起来
+git stash list #查看工作区存储列表
+git stash pop #恢复工作区
+git stash apply stash@{0} #恢复指定工作区
+
+git cherry-pick xxxx #复制一个特定的提交到当前分支
+
+git branch -D xxxx #通过强行删除丢弃一个没有被合并过的分支
 
