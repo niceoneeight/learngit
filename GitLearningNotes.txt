@@ -1,0 +1,19 @@
+Git Learning Notes
+
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+
+mkdir learngit #创建空目录
+cd learngit #切换目录
+pwd #显示当前目录
+
+git init #将目录变成git可以管理的仓库
+
+#要先放到对应目录下
+git add readme.txt #将文件添加到仓库
+
+git commit -m "wrote a readme file" #本次提交的说明
+
+
+
+
