@@ -79,3 +79,23 @@ git cherry-pick xxxx #复制一个特定的提交到当前分支
 
 git branch -D xxxx #通过强行删除丢弃一个没有被合并过的分支
 
+git tag v1.0 #给最新提交的commit打上标签
+
+git tag #查看所有标签
+
+git show v1.0 #查看标签详细信息
+
+git log --pretty=oneline --abbrev-commit #查看历史commit
+git tag v0.9 xxxx #给特定commit打标签
+
+git tag -a v1.0 -m "version 0.1 released" xxxx #创建带有说明的标签
+
+git tag -d v1.0 #删除标签
+
+git push origin v1.0 #推送某个标签到远程
+
+git push origin --tags #一次性推送所有未推送到远程的本地标签
+
+#当标签已经推送到远程，删除标签
+git tag -d v0.9 #本地删除
+git push origin :refs/tags/v0.9 #远程删除
