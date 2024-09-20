@@ -1,4 +1,4 @@
-Git Learning Notes
+Git Learning Notes #https://liaoxuefeng.com/books/git/introduction/index.html
 
 git config --global user.name "Your Name"
 git config --global user.email "email@example.com"
@@ -17,6 +17,31 @@ git commit -m "wrote a readme file" #本次提交的说明
 git status #查看仓库当前状态
 
 git diff readme.txt #查看具体修改内容
+
+git log #查看历史记录
+git log --pretty=oneline #单行输出记录
+
+git reset --hard HEAD^ #回退上个版本 HEAD^^ 上上个版本
+#--hard 回退上个版本的已提交状态 --soft 回退上个版本的未提交状态 --mixed 回退上个版本已添加但未提交状态
+
+cat readme.txt #查看文件内容
+
+git reset --hard xxxxx #回退到特定版本
+
+git reflog #查看历史每一次命令
+
+#工作区与暂存区
+#git add 将文件修改提交到暂存区
+#git commit 将暂存区所有内容提交到当前分支
+#不用git add到暂存区，就不会加入commit中
+
+#撤销修改
+git checkout -- readme.txt #丢弃工作区的修改
+git reset HEAD readme.txt #撤销暂存区的修改，放回工作区，再次 checkout
+
+rm test.txt #在文件管理器中删除文件
+git rm test.txt #从版本库中删除文件  
+git checkout -- test.txt #从版本库恢复
 
 
 
