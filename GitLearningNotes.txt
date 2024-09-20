@@ -14,6 +14,10 @@ git add readme.txt #将文件添加到仓库
 
 git commit -m "wrote a readme file" #本次提交的说明
 
+git status #查看仓库当前状态
+
+git diff readme.txt #查看具体修改内容
+
 
 
 
